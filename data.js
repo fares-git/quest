@@ -1571,6 +1571,351 @@ let defaultData =
         "question": "C quoi Intercepteur Angular",
         "textResponse": "Interceptor : modifie requêtes/réponses HTTP (ex. ajouter headers JWT). Implémente `HttpInterceptor`. Exemple : `intercept(req, next) { const authReq = req.clone({headers: req.headers.set('Authorization', token)}); return next.handle(authReq); }`.",
         "keyWords": ["Interceptor", "HttpInterceptor", "headers", "JWT"]
+      },
+      {
+        "question": "Qu'est-ce qu'Angular ?",
+        "textResponse": "Angular est un framework front-end open-source développé par Google, basé sur TypeScript, qui permet de créer des applications web dynamiques, modulaires et maintenables grâce à une architecture orientée composants.",
+        "keyWords": ["Angular", "framework", "front-end", "TypeScript", "Google", "composants", "applications web", "modulaire", "maintenable"]
+      }, {
+        "question": "Quelle est la différence entre AngularJS (1.x) et Angular (2 et versions supérieures) ?",
+        "textResponse": "AngularJS est basé sur JavaScript et utilise le concept de scope et de contrôleurs, tandis qu’Angular (2+) est basé sur TypeScript, suit une architecture orientée composants, est plus performant et supporte mieux le mobile et les grandes applications.",
+        "keyWords": ["AngularJS", "Angular", "TypeScript", "JavaScript", "scope", "contrôleurs", "composants", "performances", "mobile"]
+      }, {
+        "question": "Qu'est-ce qu'un composant dans Angular ?",
+        "textResponse": "Un composant est l’unité de base dans Angular qui combine une logique TypeScript, un template HTML et un style CSS, permettant de construire une interface utilisateur modulaire et réutilisable.",
+        "keyWords": ["composant", "Angular", "TypeScript", "HTML", "CSS", "interface utilisateur", "modulaire", "réutilisable"]
+      }, {
+        "question": "Que signifie 'Two-way data binding' dans Angular ?",
+        "textResponse": "Le Two-way data binding est un mécanisme qui synchronise automatiquement les données entre le modèle (component) et la vue (template), de sorte que toute modification d’un côté est immédiatement reflétée de l’autre.",
+        "keyWords": ["Two-way data binding", "Angular", "synchronisation", "modèle", "vue", "component", "template"]
+      }, {
+        "question": "Qu'est-ce qu'un module Angular ?",
+        "textResponse": "Un module Angular est une unité organisationnelle qui regroupe des composants, des directives, des pipes et des services, permettant de structurer et charger des fonctionnalités de manière modulaire dans une application.",
+        "keyWords": ["module", "Angular", "composants", "directives", "pipes", "services", "organisation", "modulaire"]
+      },
+
+      {
+        "question": "Qu'est-ce qu'un décorateur en Angular ?",
+        "textResponse": "En Angular, un décorateur est une fonction qui permet d'ajouter des métadonnées à une classe, une propriété ou une méthode, afin que le framework puisse les traiter et appliquer certains comportements. Par exemple, @Component définit une classe comme un composant Angular.",
+        "keyWords": ["décorateur", "Angular", "métadonnées", "@Component", "classe", "propriété", "méthode"]
+      },
+
+      {
+        "question": "Qu'est-ce qu'un `@Component` ?",
+        "textResponse": "`@Component` est un décorateur Angular qui définit la configuration d’un composant, notamment son sélecteur, son template et ses styles, et permet ainsi à Angular de comprendre comment instancier et afficher ce composant.",
+        "keyWords": ["@Component", "décorateur", "Angular", "sélecteur", "template", "styles", "composant"]
+      }, {
+        "question": "Comment déclarer un composant dans Angular ?",
+        "textResponse": "Un composant est déclaré en créant une classe TypeScript annotée avec `@Component`, et en l’ajoutant ensuite dans la section 'declarations' du module Angular correspondant.",
+        "keyWords": ["déclarer", "composant", "@Component", "TypeScript", "Angular", "module", "declarations"]
+      }, {
+        "question": "Que sont les directives en Angular ?",
+        "textResponse": "Les directives en Angular sont des classes qui permettent de manipuler le DOM ou d’ajouter des comportements aux éléments du template. Elles complètent et enrichissent les composants.",
+        "keyWords": ["directives", "Angular", "DOM", "template", "comportement", "composants"]
+      }, {
+        "question": "Quelle est la différence entre une directive structurelle et une directive d'attribut ?",
+        "textResponse": "Une directive structurelle modifie la structure du DOM (par exemple `*ngIf`, `*ngFor`), tandis qu’une directive d’attribut modifie l’apparence ou le comportement d’un élément existant (par exemple `ngClass`, `ngStyle`).",
+        "keyWords": ["directive structurelle", "directive d'attribut", "DOM", "ngIf", "ngFor", "ngClass", "ngStyle"]
+      }, {
+        "question": "Qu'est-ce qu'un service Angular ?",
+        "textResponse": "Un service Angular est une classe qui contient de la logique métier ou des fonctions réutilisables, souvent utilisées pour gérer les données, effectuer des appels HTTP ou partager des informations entre composants.",
+        "keyWords": ["service", "Angular", "logique métier", "réutilisable", "données", "HTTP", "partage", "composants"]
+      }, {
+        "question": "Quelle est la différence entre `ngOnInit` et `constructor` dans un composant ?",
+        "textResponse": "Le `constructor` sert à initialiser la classe et injecter des dépendances, tandis que `ngOnInit` est une méthode du cycle de vie Angular appelée après l’initialisation du composant, idéale pour charger des données ou exécuter une logique.",
+        "keyWords": ["constructor", "ngOnInit", "cycle de vie", "Angular", "dépendances", "initialisation", "composant"]
+      }, {
+        "question": "Comment gérer les formulaires dans Angular ?",
+        "textResponse": "Les formulaires dans Angular peuvent être gérés via deux approches : les formulaires basés sur le modèle (template-driven) et les formulaires réactifs (reactive forms), offrant respectivement simplicité et flexibilité avec une gestion plus robuste des données.",
+        "keyWords": ["formulaires", "Angular", "template-driven", "reactive forms", "saisie", "validation"]
+      }, {
+        "question": "Quelle est la différence entre un formulaire réactif et un formulaire basé sur le modèle ?",
+        "textResponse": "Un formulaire basé sur le modèle utilise le template HTML avec des directives Angular (`ngModel`), tandis qu’un formulaire réactif repose sur une gestion explicite via des objets `FormControl` et `FormGroup` dans le code TypeScript.",
+        "keyWords": ["formulaire réactif", "formulaire basé sur le modèle", "ngModel", "FormControl", "FormGroup", "Angular"]
+      }, {
+        "question": "Comment lier un modèle (binding) dans Angular ?",
+        "textResponse": "Le binding dans Angular peut être fait de quatre façons : interpolation `{{ }}`, binding d’attribut `[property]`, binding d’événement `(event)` et binding bidirectionnel `[(ngModel)]`.",
+        "keyWords": ["binding", "Angular", "interpolation", "property binding", "event binding", "two-way binding", "ngModel"]
+      }, {
+        "question": "Que sont les observables dans Angular ?",
+        "textResponse": "Les observables dans Angular (via RxJS) sont des flux asynchrones de données qui permettent de gérer des événements, des requêtes HTTP et des valeurs dynamiques, avec des opérateurs puissants pour la transformation et le filtrage.",
+        "keyWords": ["observables", "Angular", "RxJS", "flux", "asynchrone", "événements", "HTTP", "opérateurs"]
+      }, {
+        "question": "Qu'est-ce qu'un `@Input()` et un `@Output()` dans Angular ?",
+        "textResponse": "`@Input()` permet de recevoir des données d’un composant parent, tandis que `@Output()` permet d’émettre des événements vers le parent à l’aide d’un EventEmitter.",
+        "keyWords": ["@Input", "@Output", "Angular", "parent", "enfant", "EventEmitter", "données", "événements"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngFor` ?",
+        "textResponse": "`ngFor` est une directive structurelle Angular qui permet d’itérer sur une collection et de générer dynamiquement un élément du DOM pour chaque élément de la liste.",
+        "keyWords": ["ngFor", "directive structurelle", "Angular", "DOM", "collection", "itération"]
+      }, {
+        "question": "Comment gérer les événements dans Angular ?",
+        "textResponse": "Les événements dans Angular sont gérés avec le binding `(event)`, où un événement du DOM (comme click) est associé à une méthode du composant.",
+        "keyWords": ["événements", "Angular", "binding", "event binding", "DOM", "méthode", "click"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngIf` ?",
+        "textResponse": "`ngIf` est une directive structurelle Angular qui ajoute ou supprime un élément du DOM en fonction d’une condition booléenne.",
+        "keyWords": ["ngIf", "directive structurelle", "Angular", "DOM", "condition"]
+      }, {
+        "question": "Comment utiliser la méthode `HttpClient` dans Angular ?",
+        "textResponse": "Le service `HttpClient` d’Angular permet de réaliser des requêtes HTTP (GET, POST, PUT, DELETE) de manière asynchrone et retourne des observables pour traiter les réponses.",
+        "keyWords": ["HttpClient", "Angular", "HTTP", "GET", "POST", "PUT", "DELETE", "observables", "asynchrone"]
+      }, {
+        "question": "Qu'est-ce qu'un `Observable` en Angular ?",
+        "textResponse": "Un Observable en Angular est un flux de données asynchrone fourni par RxJS qui permet de gérer des événements, des appels HTTP ou des données dynamiques, avec des méthodes pour s'abonner et transformer les valeurs au fil du temps.",
+        "keyWords": ["Observable", "Angular", "RxJS", "flux", "données", "asynchrone", "événements", "HTTP", "abonnement", "transformation"]
+      }, {
+        "question": "Quelle est la différence entre `Promise` et `Observable` ?",
+        "textResponse": "Une Promise gère une seule valeur asynchrone résolue ou rejetée une fois, tandis qu’un Observable peut émettre plusieurs valeurs sur le temps, être annulé et offre des opérateurs pour la composition et la transformation des flux.",
+        "keyWords": ["Promise", "Observable", "asynchrone", "valeur unique", "plusieurs valeurs", "annulation", "opérateurs", "flux"]
+      }, {
+        "question": "Qu'est-ce que le `RxJS` et comment est-il utilisé dans Angular ?",
+        "textResponse": "RxJS est une bibliothèque pour la programmation réactive avec des observables. Dans Angular, il est utilisé pour gérer les flux asynchrones comme les événements utilisateur, les requêtes HTTP et la communication entre composants.",
+        "keyWords": ["RxJS", "Angular", "programmation réactive", "observables", "asynchrone", "événements", "HTTP", "communication"]
+      }, {
+        "question": "Qu'est-ce qu'un `@Injectable()` ?",
+        "textResponse": "`@Injectable()` est un décorateur qui marque une classe comme pouvant être injectée en tant que service dans Angular, permettant à l’injecteur de gérer sa création et sa durée de vie.",
+        "keyWords": ["@Injectable", "Angular", "service", "injection", "injecteur", "création", "durée de vie"]
+      }, {
+        "question": "Qu'est-ce qu'un `router-outlet` ?",
+        "textResponse": "`router-outlet` est une directive Angular utilisée dans le template pour indiquer où les composants liés aux routes doivent être affichés dans l’application.",
+        "keyWords": ["router-outlet", "Angular", "directive", "template", "routes", "composants", "affichage"]
+      }, {
+        "question": "Qu'est-ce que le `routing` dans Angular ?",
+        "textResponse": "Le routing dans Angular permet de naviguer entre différentes vues ou composants de l’application via des routes définies dans le module de routage, facilitant la création d’applications à pages multiples.",
+        "keyWords": ["routing", "Angular", "navigation", "vues", "composants", "routes", "pages multiples"]
+      }, {
+        "question": "Comment gérer la navigation dans Angular ?",
+        "textResponse": "La navigation dans Angular est gérée avec le Router, en utilisant soit `routerLink` dans les templates pour les liens, soit la méthode `navigate()` du Router pour la navigation programmatique.",
+        "keyWords": ["navigation", "Angular", "Router", "routerLink", "navigate()", "programmatique", "template"]
+      }, {
+        "question": "Qu'est-ce que `routerLink` ?",
+        "textResponse": "`routerLink` est une directive Angular utilisée dans les templates pour créer des liens vers des routes définies dans le module de routage, permettant de naviguer sans recharger la page.",
+        "keyWords": ["routerLink", "Angular", "directive", "template", "routes", "navigation", "SPA"]
+      }, {
+        "question": "Quelle est la différence entre `path` et `component` dans la configuration du routeur Angular ?",
+        "textResponse": "`path` définit l’URL associée à une route tandis que `component` indique le composant Angular qui sera rendu lorsque cette route est activée.",
+        "keyWords": ["path", "component", "route", "Angular", "URL", "composant", "rendu"]
+      }, {
+        "question": "Comment gérer les paramètres de route dans Angular ?",
+        "textResponse": "Les paramètres de route sont accessibles via `ActivatedRoute` dans le composant, permettant de récupérer les paramètres statiques, dynamiques ou de requête et de les utiliser dans la logique du composant.",
+        "keyWords": ["paramètres", "route", "Angular", "ActivatedRoute", "statique", "dynamique", "requête", "composant"]
+      }, {
+        "question": "Qu'est-ce qu'un `pipe` dans Angular ?",
+        "textResponse": "Un pipe Angular est une fonction qui transforme les valeurs affichées dans le template, comme la mise en forme de dates, de nombres ou de textes, sans modifier les données sources.",
+        "keyWords": ["pipe", "Angular", "transformation", "template", "format", "dates", "nombres", "texte"]
+      }, {
+        "question": "Comment créer un `pipe` personnalisé ?",
+        "textResponse": "Pour créer un pipe personnalisé, on définit une classe TypeScript annotée avec `@Pipe` et qui implémente la méthode `transform()`, puis on l’ajoute dans la section 'declarations' du module Angular.",
+        "keyWords": ["pipe", "personnalisé", "Angular", "@Pipe", "transform()", "TypeScript", "module", "declarations"]
+      }, {
+        "question": "Quelle est la différence entre `async` et `await` dans Angular ?",
+        "textResponse": "`async` et `await` sont utilisés avec les Promises pour simplifier la gestion asynchrone : `async` marque une fonction qui retourne une Promise et `await` pause l’exécution jusqu’à ce que la Promise soit résolue.",
+        "keyWords": ["async", "await", "Angular", "Promise", "asynchrone", "exécution", "résolution"]
+      }, {
+        "question": "Qu'est-ce que la gestion de la dépendance dans Angular ?",
+        "textResponse": "La gestion de la dépendance (Dependency Injection) dans Angular permet d’injecter automatiquement des services ou des classes dans des composants, directives ou pipes, centralisant la création et le partage des instances.",
+        "keyWords": ["dependency injection", "Angular", "services", "composants", "directives", "pipes", "injection", "instances"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngModel` et comment l'utiliser ?",
+        "textResponse": "`ngModel` est une directive Angular qui permet le binding bidirectionnel entre un élément du template et une propriété du composant, utilisée principalement dans les formulaires.",
+        "keyWords": ["ngModel", "Angular", "binding bidirectionnel", "template", "propriété", "composant", "formulaires"]
+      }, {
+        "question": "Qu'est-ce qu'un `template-driven form` ?",
+        "textResponse": "Un template-driven form est un formulaire Angular où la structure, la validation et le binding sont définis directement dans le template HTML en utilisant des directives comme `ngModel` et `required`.",
+        "keyWords": ["template-driven form", "Angular", "formulaire", "template", "ngModel", "validation", "directives"]
+      }, {
+        "question": "Comment fonctionne la validation dans Angular ?",
+        "textResponse": "La validation dans Angular peut être réalisée avec des validateurs intégrés (comme required, minLength) ou personnalisés, appliqués aux formulaires réactifs ou template-driven pour vérifier la validité des données avant soumission.",
+        "keyWords": ["validation", "Angular", "validateurs", "formulaires réactifs", "template-driven", "données"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngClass` ?",
+        "textResponse": "`ngClass` est une directive Angular qui permet d’ajouter ou de supprimer dynamiquement des classes CSS à un élément en fonction de conditions ou d’objets dans le composant.",
+        "keyWords": ["ngClass", "Angular", "directive", "classes CSS", "dynamique", "conditions", "composant"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngStyle` ?",
+        "textResponse": "`ngStyle` est une directive Angular qui permet de modifier dynamiquement les styles CSS d’un élément en fonction des propriétés du composant.",
+        "keyWords": ["ngStyle", "Angular", "directive", "styles CSS", "dynamique", "composant"]
+      }, {
+        "question": "Qu'est-ce qu'un `formControl` ?",
+        "textResponse": "`formControl` est un objet Angular utilisé dans les formulaires réactifs pour gérer l’état et la valeur d’un champ individuel, permettant la validation et l’interaction programmatique avec le formulaire.",
+        "keyWords": ["formControl", "Angular", "formulaires réactifs", "valeur", "état", "validation", "programme"]
+      }, {
+        "question": "Qu'est-ce que le `Lazy Loading` dans Angular ?",
+        "textResponse": "Le Lazy Loading dans Angular est une technique qui consiste à charger des modules uniquement lorsqu’ils sont nécessaires, réduisant le temps de chargement initial et optimisant les performances de l’application.",
+        "keyWords": ["Lazy Loading", "Angular", "modules", "chargement différé", "performances", "optimisation"]
+      }, {
+        "question": "Qu'est-ce qu'un `Service Worker` en Angular ?",
+        "textResponse": "Un Service Worker est un script qui s’exécute en arrière-plan dans le navigateur et permet de gérer le cache, les notifications push et le fonctionnement hors-ligne dans les applications Angular PWA.",
+        "keyWords": ["Service Worker", "Angular", "script", "cache", "notifications push", "hors-ligne", "PWA"]
+      }, {
+        "question": "Comment gérez-vous la gestion des erreurs dans Angular ?",
+        "textResponse": "La gestion des erreurs dans Angular peut se faire via les blocs try-catch, les opérateurs RxJS comme catchError pour les Observables, et les services globaux pour intercepter et centraliser les erreurs dans l’application.",
+        "keyWords": ["gestion des erreurs", "Angular", "try-catch", "RxJS", "catchError", "Observables", "service global"]
+      }, {
+        "question": "Qu'est-ce que `ngSwitch` ?",
+        "textResponse": "`ngSwitch` est une directive structurelle Angular utilisée pour afficher un élément parmi plusieurs options en fonction d’une expression, similaire à un switch-case en JavaScript.",
+        "keyWords": ["ngSwitch", "directive structurelle", "Angular", "expression", "switch-case", "affichage conditionnel"]
+      }, {
+        "question": "Qu'est-ce que l'injection de dépendances dans Angular ?",
+        "textResponse": "L’injection de dépendances (Dependency Injection) dans Angular est un mécanisme qui permet de fournir automatiquement des instances de services ou d’objets aux composants, directives et pipes, facilitant la modularité et le test unitaire.",
+        "keyWords": ["injection de dépendances", "Angular", "Dependency Injection", "services", "composants", "modularité", "test unitaire"]
+      }, {
+        "question": "Qu'est-ce qu'un `HttpInterceptor` ?",
+        "textResponse": "Un HttpInterceptor est un service Angular qui intercepte toutes les requêtes et réponses HTTP, permettant de modifier les en-têtes, gérer les erreurs globalement ou ajouter des tokens d’authentification.",
+        "keyWords": ["HttpInterceptor", "Angular", "requêtes HTTP", "réponses HTTP", "interception", "en-têtes", "authentification", "gestion des erreurs"]
+      }, {
+        "question": "Quelle est la différence entre `ngOnInit` et `ngAfterViewInit` ?",
+        "textResponse": "`ngOnInit` est appelé après l’initialisation des propriétés liées aux entrées du composant, tandis que `ngAfterViewInit` est appelé après que les vues et les composants enfants ont été initialisés, utile pour accéder au DOM ou aux enfants.",
+        "keyWords": ["ngOnInit", "ngAfterViewInit", "Angular", "initialisation", "composants enfants", "DOM"]
+      }, {
+        "question": "Qu'est-ce que `ngOnDestroy` ?",
+        "textResponse": "`ngOnDestroy` est un hook du cycle de vie Angular appelé juste avant la destruction d’un composant ou d’une directive, utilisé pour nettoyer les subscriptions, timers ou ressources afin d’éviter les fuites mémoire.",
+        "keyWords": ["ngOnDestroy", "Angular", "cycle de vie", "composant", "directive", "subscriptions", "fuites mémoire"]
+      }, {
+        "question": "Qu'est-ce que la gestion d'état (state management) dans Angular ?",
+        "textResponse": "La gestion d’état dans Angular consiste à centraliser et contrôler l’état de l’application pour garantir la cohérence des données, souvent avec des bibliothèques comme NgRx ou Akita.",
+        "keyWords": ["gestion d'état", "Angular", "centralisation", "cohérence", "NgRx", "Akita", "application"]
+      }, {
+        "question": "Qu'est-ce que `ChangeDetectionStrategy.OnPush` ?",
+        "textResponse": "`ChangeDetectionStrategy.OnPush` est une stratégie de détection des changements Angular qui ne vérifie un composant que lorsque ses inputs changent, améliorant les performances des applications complexes.",
+        "keyWords": ["ChangeDetectionStrategy.OnPush", "Angular", "détection des changements", "inputs", "performances"]
+      }, {
+        "question": "Qu'est-ce qu'un `ng-content` et comment fonctionne-t-il ?",
+        "textResponse": "`ng-content` est une directive Angular utilisée pour insérer du contenu provenant d’un composant parent dans le template d’un composant enfant, facilitant la création de composants réutilisables et flexibles.",
+        "keyWords": ["ng-content", "Angular", "directive", "contenu", "composant parent", "composant enfant", "réutilisable"]
+      }, {
+        "question": "Comment fonctionne le `zone.js` dans Angular ?",
+        "textResponse": "Zone.js est une bibliothèque utilisée par Angular pour détecter automatiquement les changements asynchrones (Promesses, événements, timers) et déclencher la détection de changements sans intervention manuelle.",
+        "keyWords": ["zone.js", "Angular", "asynchrone", "Promesse", "événements", "timers", "détection de changements"]
+      }, {
+        "question": "Qu'est-ce qu'un `ng-template` ?",
+        "textResponse": "`ng-template` est une balise Angular utilisée pour définir des templates réutilisables ou conditionnels dans le DOM, qui ne sont pas rendus tant qu’ils ne sont pas référencés par une directive comme `ngIf` ou `ngFor`.",
+        "keyWords": ["ng-template", "Angular", "template", "réutilisable", "conditionnel", "DOM", "ngIf", "ngFor"]
+      }, {
+        "question": "Qu'est-ce que le `dependency injection` dans Angular ?",
+        "textResponse": "Le dependency injection dans Angular permet de fournir automatiquement des instances de services aux composants, directives et pipes, améliorant la modularité, la testabilité et la gestion centralisée des dépendances.",
+        "keyWords": ["dependency injection", "Angular", "services", "composants", "modularité", "testabilité", "dépendances"]
+      }, {
+        "question": "Qu'est-ce que le concept de `Observables` et comment l'utiliser avec `HttpClient` ?",
+        "textResponse": "Les Observables permettent de gérer des flux asynchrones dans Angular. Avec HttpClient, ils sont utilisés pour effectuer des requêtes HTTP et s’abonner aux réponses, offrant des opérateurs pour transformer, filtrer ou combiner les données.",
+        "keyWords": ["Observables", "Angular", "HttpClient", "flux asynchrone", "requêtes HTTP", "abonnement", "opérateurs"]
+      }, {
+        "question": "Qu'est-ce qu'un `Component Lifecycle Hook` ?",
+        "textResponse": "Un Component Lifecycle Hook est une méthode spéciale dans un composant Angular qui permet d’exécuter du code à différentes étapes du cycle de vie d’un composant, comme ngOnInit, ngAfterViewInit ou ngOnDestroy.",
+        "keyWords": ["Component Lifecycle Hook", "Angular", "composant", "cycle de vie", "ngOnInit", "ngAfterViewInit", "ngOnDestroy"]
+      }, {
+        "question": "Qu'est-ce qu'un `ngFor` avec index ?",
+        "textResponse": "`ngFor` avec index est une directive Angular qui permet d’itérer sur une collection tout en exposant la position actuelle de chaque élément via la variable `index`.",
+        "keyWords": ["ngFor", "Angular", "directive", "index", "itération", "collection"]
+      }, {
+        "question": "Qu'est-ce que le `trackBy` dans une boucle `ngFor` ?",
+        "textResponse": "`trackBy` est une option dans `ngFor` qui permet de fournir une fonction pour identifier les éléments uniques d’une collection, optimisant ainsi la détection des changements et la performance lors du rendu.",
+        "keyWords": ["trackBy", "ngFor", "Angular", "éléments uniques", "détection des changements", "performance"]
+      }, {
+        "question": "Qu'est-ce qu'un `ng-container` ?",
+        "textResponse": "`ng-container` est une balise Angular qui ne génère pas de DOM propre mais sert de wrapper logique pour appliquer des directives structurelles ou regrouper des éléments dans le template.",
+        "keyWords": ["ng-container", "Angular", "template", "wrapper", "directive structurelle", "DOM"]
+      }, {
+        "question": "Qu'est-ce qu'un `@ViewChild` ?",
+        "textResponse": "`@ViewChild` est un décorateur Angular qui permet d’accéder à un élément DOM ou à un composant enfant depuis le composant parent, facilitant l’interaction et la manipulation programmée du template.",
+        "keyWords": ["@ViewChild", "Angular", "décorateur", "DOM", "composant enfant", "interaction", "template"]
+      },
+      {
+        "question": "Qu’est-ce que le ChangeDetectionStrategy.OnPush ?",
+        "textResponse": "ChangeDetectionStrategy.OnPush optimise la détection de changements dans Angular en ne vérifiant les composants que lorsque leurs inputs changent ou lorsqu’un événement est émis depuis le composant. Cela améliore les performances, réduit le rendu inutile et est particulièrement utile pour les applications complexes.",
+        "keyWords": ["ChangeDetectionStrategy.OnPush", "Angular", "performance", "inputs", "détection de changements"]
+      },
+      {
+        "question": "Comment fonctionne la gestion d’état avec NgRx ?",
+        "textResponse": "NgRx implémente Redux pour Angular, centralisant l’état de l’application dans un store immuable. Les composants déclenchent des actions, les reducers mettent à jour l’état, et les sélecteurs permettent de récupérer des morceaux de l’état. Les effets (Effects) gèrent les opérations asynchrones et les interactions externes.",
+        "keyWords": ["NgRx", "Redux", "store", "actions", "reducers", "selectors", "Effects", "asynchronous"]
+      },
+      {
+        "question": "Quelle est la différence entre Subject, BehaviorSubject, et ReplaySubject dans RxJS ?",
+        "textResponse": "Subject est un observable multicast simple. BehaviorSubject émet la dernière valeur à chaque nouvel abonné et nécessite une valeur initiale. ReplaySubject émet un nombre défini de valeurs précédentes à chaque nouvel abonné. Chacun sert à gérer différents cas de partage et de replay des données.",
+        "keyWords": ["Subject", "BehaviorSubject", "ReplaySubject", "RxJS", "multicast", "dernier valeur", "replay"]
+      },
+      {
+        "question": "Comment sécuriser une application Angular avec JWT ?",
+        "textResponse": "On sécurise Angular avec JWT en stockant le token de manière sécurisée (localStorage ou sessionStorage), en l’incluant dans les headers Authorization via HttpInterceptor, et en validant côté serveur. Le refresh token permet de maintenir la session sans demander les identifiants à chaque fois.",
+        "keyWords": ["JWT", "Angular", "HttpInterceptor", "Authorization header", "refresh token", "security"]
+      },
+      {
+        "question": "À quoi sert trackBy dans une boucle *ngFor ?",
+        "textResponse": "trackBy permet d’optimiser le rendu des listes en identifiant chaque élément par une clé unique. Angular ne recrée que les éléments qui ont changé, améliorant ainsi les performances et réduisant les manipulations DOM inutiles.",
+        "keyWords": ["trackBy", "*ngFor", "performance", "key", "DOM", "Angular"]
+      },
+      {
+        "question": "Qu'est-ce qu’un Observable ?",
+        "textResponse": "Un Observable est un objet représentant un flux de données asynchrones qui peut émettre zéro, une ou plusieurs valeurs. Les abonnés (subscribe) reçoivent ces valeurs au fur et à mesure, et les Observables supportent des opérations de transformation et de combinaison via RxJS.",
+        "keyWords": ["Observable", "asynchronous", "flux de données", "subscribe", "RxJS"]
+      },
+      {
+        "question": "Différence entre une Promise et un Observable",
+        "textResponse": "Une Promise gère une seule valeur asynchrone, tandis qu’un Observable peut émettre plusieurs valeurs dans le temps. Les Observables sont lazy, cancellables et offrent des opérateurs puissants pour transformer et combiner les flux de données.",
+        "keyWords": ["Promise", "Observable", "asynchronous", "lazy", "multiple values", "RxJS"]
+      },
+      {
+        "question": "Quelle est la signature de la méthode subscribe() (paramètres et objets renvoyés) ?",
+        "textResponse": "subscribe(next?: (value) => void, error?: (err) => void, complete?: () => void) permet de réagir aux émissions d’un Observable. Elle retourne un Subscription qui peut être utilisée pour se désabonner et éviter les fuites mémoire.",
+        "keyWords": ["subscribe", "Observable", "next", "error", "complete", "Subscription", "RxJS"]
+      },
+      {
+        "question": "Est-ce que la requête browser est envoyée au serveur si on ne fait pas le subscribe() ?",
+        "textResponse": "Non, les Observables sont lazy par défaut. Sans subscribe(), aucun code asynchrone n’est exécuté et aucune requête HTTP via HttpClient n’est envoyée.",
+        "keyWords": ["Observable", "lazy", "subscribe", "HttpClient", "Angular"]
+      },
+      {
+        "question": "Différence entre let et var.",
+        "textResponse": "var a une portée fonction et est hoisté, tandis que let a une portée bloc et n’est pas hoisté de la même façon. let permet d’éviter les collisions et comportements inattendus liés au scope.",
+        "keyWords": ["var", "let", "scope", "hoisting", "block scope", "JavaScript"]
+      },
+      {
+        "question": "Qu’est-ce que le callback ?",
+        "textResponse": "Un callback est une fonction passée en paramètre à une autre fonction pour être exécutée après un événement ou une opération asynchrone. Il permet de gérer le flow asynchrone dans JavaScript et Angular.",
+        "keyWords": ["callback", "function", "asynchronous", "JavaScript", "Angular"]
+      },
+      {
+        "question": "Qu’est-ce que RxJs ?",
+        "textResponse": "RxJS est une librairie pour la programmation réactive en JavaScript/TypeScript. Elle fournit Observables, opérateurs de transformation et de combinaison de flux, permettant de gérer facilement les événements asynchrones et le state management.",
+        "keyWords": ["RxJS", "Observable", "reactive programming", "operators", "asynchronous"]
+      },
+      {
+        "question": "Cycle de vie des composants ?",
+        "textResponse": "Angular définit des hooks comme ngOnInit, ngOnChanges, ngDoCheck, ngAfterViewInit, ngAfterContentInit, ngOnDestroy pour gérer le cycle de vie des composants, permettant d’initialiser, vérifier et nettoyer les ressources de manière contrôlée.",
+        "keyWords": ["Angular", "component lifecycle", "ngOnInit", "ngOnDestroy", "hooks"]
+      },
+      {
+        "question": "Qu’est-ce que le Lazy loading ?",
+        "textResponse": "Le Lazy loading charge les modules Angular uniquement lorsque nécessaire, réduisant le bundle initial et améliorant la performance. Il est configuré via le routing avec loadChildren et optimise les applications volumineuses.",
+        "keyWords": ["Lazy loading", "Angular", "modules", "loadChildren", "performance"]
+      },
+      {
+        "question": "Qu’est-ce que Redux ?",
+        "textResponse": "Redux est un pattern de gestion d’état centralisé avec un store immuable, des actions pour déclencher des changements et des reducers pour appliquer les transformations. NgRx est l’implémentation Angular de Redux.",
+        "keyWords": ["Redux", "store", "actions", "reducers", "state management", "NgRx"]
+      },
+      {
+        "question": "Quelles sont les nouveautés importantes d’Angular 18 ?",
+        "textResponse": "Angular 18 introduit des améliorations de performance, l’intégration stricte du TypeScript 5, des optimisations du rendu, des composants standalone améliorés, ainsi que des outils améliorés pour le testing et l’optimisation de build.",
+        "keyWords": ["Angular 18", "performance", "TypeScript 5", "standalone components", "testing", "build optimization"]
+      },
+      {
+        "question": "Comment gérez-vous l’architecture d’un gros projet Angular ?",
+        "textResponse": "Pour un gros projet Angular, on utilise une architecture modulaire avec feature modules, shared modules, lazy loading, services injectables, state management via NgRx ou services singleton, et tests unitaires et e2e pour assurer maintenabilité et scalabilité.",
+        "keyWords": ["Angular", "modular architecture", "feature modules", "shared modules", "lazy loading", "NgRx", "scalability"]
+      },
+      {
+        "question": "Comment gérez-vous l’état complexe dans Angular ?",
+        "textResponse": "L’état complexe est géré via NgRx ou des services singleton avec BehaviorSubject, combinant sélecteurs, effets et reducers pour assurer un flux unidirectionnel, la synchronisation des composants et la prévisibilité des changements.",
+        "keyWords": ["state management", "NgRx", "BehaviorSubject", "selectors", "reducers", "effects", "unidirectional flow"]
+      }
+    ,
+      {
+        "question": "Comment testez-vous un composant Angular avec dépendances ?",
+        "textResponse": "On utilise TestBed pour configurer le module de test, fournir les dépendances mockées via providers et utiliser async/await ou fakeAsync pour tester les composants avec observables. Les spies permettent de contrôler les appels de méthodes dépendantes.",
+        "keyWords": ["TestBed", "Angular testing", "mock", "providers", "async", "fakeAsync", "spy"]
       }
     ]
   },
@@ -1690,6 +2035,7 @@ let defaultData =
     ]
   }
 ];
+
 
 
 
